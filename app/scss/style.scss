@@ -1,0 +1,123 @@
+@import 'grid';
+@import 'awesome';
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Comfortaa', cursive;
+  font-size: 0.48vw;
+  position: relative;
+  background-color: #f6f6f7;
+}
+
+header {
+  padding: 2em;
+  text-align: center;
+}
+.header-logotype {
+  width: 19.2em;
+  height: 4.2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blue-color {
+  color: #1082f3;
+}
+
+main {
+}
+.all-info-container {
+  max-width: 186em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 98%;
+}
+
+.registrations-statistics {
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 5em 0;
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+.all-count-stat {
+  text-align: center;
+  width: 30em;
+  height: 30em;
+  box-sizing: border-box;
+  padding: 3em;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+  float: left;
+  overflow: visible;
+  &_title {
+    span, i {
+      vertical-align: middle;
+    }
+    span {
+      font-size: 1.6em;
+    }
+    i {
+      font-size: 2.4em;
+    }
+  }
+  &_number {
+    font-weight: bold;
+    font-size: 9em;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin-top: -0.5em;
+    &__plus {
+      font-size: 0.8em;
+      position: absolute;
+      left: 100%;
+      color: #63c700;
+      margin-left: 0.5em;
+      border-radius: 50%;
+      background-color: #fff;
+      text-align: center;
+      width: 2.2em;
+      line-height: 2.2em;
+      margin-top: -0.4em;
+    }
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+
+@import 'currencies';
+@import 'contracts';
+
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.1vw;
+  }
+  .all-info-container {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 680px) {
+  body {
+    font-size: 2vw;
+  }
+  .registrations-statistics {
+    font-size: 80%;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}

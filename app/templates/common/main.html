@@ -1,0 +1,195 @@
+<div class="all-info-container" ng-if="statistics">
+    <div class="grid-row">
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.wish_usd_percent_change_24h >= 0, 'currency-info-block__negative': statistics.wish_usd_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
+                    WISH
+                </div>
+                <div class="currency-info-block_rate">${{statistics.wish_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    <div class="float-right">Rank <b>{{statistics.mywish_rank}}</b></div>
+                    {{statistics.wish_usd_percent_change_24h > 0 ? '+' : ''}}{{statistics.wish_usd_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.wish_eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.wish_eth_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
+                    ETH
+                </div>
+                <div class="currency-info-block_rate">{{statistics.wish_price_eth}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.wish_eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.wish_eth_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.btc_percent_change_24h >= 0, 'currency-info-block__negative': statistics.btc_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/btc.svg">
+                    BTC
+                </div>
+                <div class="currency-info-block_rate">${{statistics.btc_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.btc_percent_change_24h > 0 ? '+' : ''}}{{statistics.btc_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.eth_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
+                    ETH
+                </div>
+                <div class="currency-info-block_rate">${{statistics.eth_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.eth_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="registrations-statistics">
+        <div class="grid-row">
+            <div class="grid-cell grid-cell-1-2 grid-cell-s-1">
+                <div class="all-count-stat">
+                    <div class="all-count-stat_title">
+                        <i class="icon-account blue-color"></i>&nbsp;&nbsp;
+                        <span>Users</span>
+                    </div>
+                    <div class="all-count-stat_number">
+                        {{statistics.users}}
+                        <span class="all-count-stat_number__plus"
+                              ng-if="statistics.new_users">+{{statistics.new_users}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-cell grid-cell-1-2 grid-cell-s-1">
+                <div class="all-count-stat">
+                    <div class="all-count-stat_title">
+                        <i class="icon-contracts blue-color"></i>&nbsp;&nbsp;
+                        <span>Contracts</span>
+                    </div>
+                    <div class="all-count-stat_number">
+                        {{statistics.contracts}}
+                        <span class="all-count-stat_number__plus"
+                              ng-if="statistics.new_contracts">+{{statistics.new_contracts}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contracts-statistics">
+        <div class="grid-row">
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.contract_type_0}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.contract_type_0_new">{{statistics.contract_type_0_new}}</div>
+                    <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
+                </div>
+                <div class="contracts-statistics_name">Will</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.contract_type_4}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.contract_type_4_new">{{statistics.contract_type_4_new}}</div>
+                    <i class="icon-crowdsale contracts-statistics_info__icon blue-color"></i>
+                </div>
+                <div class="contracts-statistics_name">Sale (CrowdSale)</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.contract_type_5}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.contract_type_5_new">{{statistics.contract_type_5_new}}</div>
+                    <i class="icon-token contracts-statistics_info__icon blue-color"></i>
+                </div>
+                <div class="contracts-statistics_name">Token</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.contract_type_1}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.contract_type_1_new">{{statistics.contract_type_1_new}}</div>
+                    <i class="icon-key contracts-statistics_info__icon blue-color"></i>
+                </div>
+                <div class="contracts-statistics_name">Lostkey</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.contract_type_2}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.contract_type_2_new">{{statistics.contract_type_2_new}}</div>
+                    <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
+                </div>
+                <div class="contracts-statistics_name">Deferred Payment</div>
+            </div>
+        </div>
+
+
+
+        <div class="grid-row">
+            <div class="grid-cell grid-cell-1-10 hide-s">&nbsp;</div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.created_contracts}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new"
+                         ng-if="statistics.now_created">{{statistics.now_created}}</div>
+                </div>
+                <div class="contracts-statistics_name">Created</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.active_contracts}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.now_active">{{statistics.now_active}}</div>
+                </div>
+                <div class="contracts-statistics_name">Active</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.done}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new" ng-if="statistics.now_done">{{statistics.now_done}}</div>
+                </div>
+                <div class="contracts-statistics_name">Done</div>
+            </div>
+            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                <div class="contracts-statistics_info">
+                    <div class="contracts-statistics_info__count">
+                        {{statistics.error}}
+                    </div>
+                    <div class="contracts-statistics_info__count_new_error"
+                         ng-if="statistics.now_error">{{statistics.now_error}}</div>
+                </div>
+                <div class="contracts-statistics_name">Error</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--0: 'lastWill',-->
+<!--1: 'lostKey',-->
+<!--2: 'deferred',-->
+<!--3: 'shopping',-->
+<!--4: 'crowdSale',-->
+<!--5: 'token'-->
