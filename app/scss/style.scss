@@ -1,6 +1,7 @@
 @import 'grid';
 @import 'awesome';
 
+$ropsten-color: #ffd;
 html, body {
   height: 100%;
   width: 100%;
@@ -35,12 +36,14 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 98%;
+  padding-top: 3em;
 }
 
 .registrations-statistics {
   margin-left: 10em;
   margin-right: 10em;
   padding: 5em 0;
+  font-size: 90%;
   &:after {
     clear: both;
     display: block;
@@ -59,6 +62,7 @@ main {
   float: left;
   overflow: visible;
   &_title {
+    font-size: 1.2em;
     span, i {
       vertical-align: middle;
     }
@@ -67,6 +71,17 @@ main {
     }
     i {
       font-size: 2.4em;
+    }
+  }
+  &.eth-mainnet {
+    .eth-mainnet {
+      opacity: 1;
+    }
+  }
+  &.eth-ropsten {
+    background-color: $ropsten-color;
+    .eth-ropsten {
+      opacity: 1;
     }
   }
   &_number {
@@ -78,6 +93,16 @@ main {
     top: 50%;
     right: 0;
     margin-top: -0.5em;
+    &.eth-mainnet &__plus {
+      background-color: #fff;
+    }
+    &.eth-ropsten &__plus {
+      background-color: $ropsten-color;
+    }
+    &.eth-mainnet, &.eth-ropsten {
+      transition: opacity linear 1s;
+      opacity: 0;
+    }
     &__plus {
       font-size: 0.8em;
       position: absolute;
@@ -85,7 +110,6 @@ main {
       color: #63c700;
       margin-left: 0.5em;
       border-radius: 50%;
-      background-color: #fff;
       text-align: center;
       width: 2.2em;
       line-height: 2.2em;
@@ -93,11 +117,12 @@ main {
     }
   }
 }
-
+.bold {
+  font-weight: bold;
+}
 .float-right {
   float: right;
 }
-
 
 @import 'currencies';
 @import 'contracts';

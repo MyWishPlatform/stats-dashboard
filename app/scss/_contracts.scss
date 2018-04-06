@@ -50,3 +50,55 @@
     }
   }
 }
+
+.network-type {
+  position: relative;
+  &__title {
+    font-size: 3em;
+    line-height: 1.5em;
+    color: #888;
+    text-align: center;
+    padding: 0 0 1em;
+    img {
+      height: 1.5em;
+      vertical-align: middle;
+      margin-top: -0.2em;
+    }
+    span {
+      vertical-align: middle;
+      &.bold {
+        color: #444;
+      }
+    }
+  }
+  &__content {
+    transition: opacity linear 1s;
+    &.eth-ropsten {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      .grid-row {
+        background-color: $ropsten-color;
+      }
+    }
+  }
+  &.eth-mainnet &__content {
+    &.eth-ropsten {
+      opacity: 0;
+    }
+    &.eth-mainnet {
+      opacity: 1;
+    }
+  }
+  &.eth-ropsten  &__content {
+    &.eth-ropsten {
+      opacity: 1;
+    }
+    &.eth-mainnet {
+      opacity: 0;
+    }
+  }
+}
+
+
