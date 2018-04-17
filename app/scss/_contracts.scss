@@ -1,4 +1,7 @@
 .contracts-statistics {
+  + .contracts-statistics {
+    margin-top: 3em;
+  }
   &_info {
     text-align: center;
     position: relative;
@@ -38,27 +41,30 @@
   &_name {
     text-align: center;
     font-size: 2em;
-    padding: 1em 0;
+    padding: 1em 0 0;
     border-top: 2px solid #8dc2fa;
     margin: 0 1.5em;
   }
   .grid-row {
-    padding: 3em 0 2em;
-    background-color: #fff;
     + .grid-row {
-      margin-top: 2em;
+      margin-top: 1em;
     }
   }
 }
 
+.grid-row {
+  &.with-padding {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
 .network-type {
   position: relative;
   &__title {
-    font-size: 3em;
-    line-height: 1.5em;
     color: #888;
     text-align: center;
-    padding: 0 0 1em;
+    font-size: 2.7em;
+    line-height: 2em;
     img {
       height: 1.5em;
       vertical-align: middle;
@@ -73,31 +79,50 @@
   }
   &__content {
     transition: opacity linear 1s;
-    &.eth-ropsten {
+
+    &.testnet {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      .grid-row {
-        background-color: $ropsten-color;
-      }
     }
   }
-  &.eth-mainnet &__content {
-    &.eth-ropsten {
+  &.mainnet &__content {
+    &.testnet {
       opacity: 0;
     }
-    &.eth-mainnet {
+    &.mainnet {
       opacity: 1;
     }
   }
-  &.eth-ropsten  &__content {
-    &.eth-ropsten {
+  &.testnet  &__content {
+    &.testnet {
       opacity: 1;
     }
-    &.eth-mainnet {
+    &.mainnet {
       opacity: 0;
     }
+  }
+}
+
+.eth-colorized, .rsk-colorized {
+  border-radius: 1em;
+}
+
+.testnet {
+  .eth-colorized {
+    background-color: $ropsten-color;
+  }
+  .rsk-colorized {
+    background-color: #ffdac7;
+  }
+}
+.mainnet {
+  .eth-colorized {
+    background-color: #dffff1;
+  }
+  .rsk-colorized {
+    background-color: #dff1ff;
   }
 }
 
