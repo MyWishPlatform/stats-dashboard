@@ -8,8 +8,8 @@ var module = angular.module('app', ['Constants', 'ui.router', 'Directives', 'Ser
 
 module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, $http, $interval) {
 
-    var networksList = ['ETHEREUM_MAINNET', 'ETHEREUM_ROPSTEN'];
-    $rootScope.network = 'ETHEREUM_MAINNET';
+    var networksList = ['MAINNET', 'TESTNET'];
+    $rootScope.network = 'MAINNET';
 
     $interval(function() {
         var index = networksList.indexOf($rootScope.network);
@@ -36,6 +36,17 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
             response.data.currency_statistics.wish_eth_percent_change_24h = Math.round(percentChangeWishEth * 100) / 100;
             response.data.currency_statistics.wish_price_usd = Math.round(response.data.currency_statistics.wish_price_usd * 100) / 100;
             response.data.currency_statistics.wish_price_eth = Math.round(response.data.currency_statistics.wish_price_eth * 100000) / 100000;
+
+            $rootScope.networksKeys = {
+                MAINNET: {
+                    RSK: response.data['RSK_MAINNET'],
+                    ETH: response.data['ETHEREUM_MAINNET']
+                },
+                TESTNET: {
+                    RSK: response.data['RSK_TESTNET'],
+                    ETH: response.data['ETHEREUM_ROPSTEN']
+                }
+            };
         });
     };
     $interval(updateStatistics, 30000);

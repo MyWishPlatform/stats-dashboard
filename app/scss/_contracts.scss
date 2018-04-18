@@ -1,4 +1,7 @@
 .contracts-statistics {
+  + .contracts-statistics {
+    margin-top: 3em;
+  }
   &_info {
     text-align: center;
     position: relative;
@@ -38,27 +41,30 @@
   &_name {
     text-align: center;
     font-size: 2em;
-    padding: 1em 0;
+    padding: 1em 0 0;
     border-top: 2px solid #8dc2fa;
     margin: 0 1.5em;
   }
   .grid-row {
-    padding: 3em 0 2em;
-    background-color: #fff;
     + .grid-row {
-      margin-top: 2em;
+      margin-top: 1em;
     }
   }
 }
 
+.grid-row {
+  &.with-padding {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+}
 .network-type {
   position: relative;
   &__title {
-    font-size: 3em;
-    line-height: 1.5em;
-    color: #888;
+    color: #444;
     text-align: center;
-    padding: 0 0 1em;
+    font-size: 3.8em;
+    line-height: 1.5em;
     img {
       height: 1.5em;
       vertical-align: middle;
@@ -73,32 +79,68 @@
   }
   &__content {
     transition: opacity linear 1s;
-    &.eth-ropsten {
+    position: relative;
+    &_short-text {
+      font-size: 3.5em;
+      line-height: 1.2em;
+      padding: 0.25em;
+      color: #aaa;
+      font-weight: bold;
+      span {
+        transition: color 1s linear;
+      }
+      .bold {
+        color: #000;
+      }
+    }
+    &.testnet {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      .grid-row {
+    }
+
+    &.testnet {
+      .eth-colorized {
         background-color: $ropsten-color;
       }
+      .rsk-colorized {
+        background-color: #dafdd8;
+      }
     }
+    &.mainnet {
+      .eth-colorized {
+        background-color: #dffff1;
+      }
+      .rsk-colorized {
+        background-color: #dff1ff;
+      }
+    }
+
+
+
+
   }
-  &.eth-mainnet &__content {
-    &.eth-ropsten {
+  &.mainnet &__content {
+    &.testnet {
       opacity: 0;
     }
-    &.eth-mainnet {
+    &.mainnet {
       opacity: 1;
     }
   }
-  &.eth-ropsten  &__content {
-    &.eth-ropsten {
+  &.testnet  &__content {
+    &.testnet {
       opacity: 1;
     }
-    &.eth-mainnet {
+    &.mainnet {
       opacity: 0;
     }
   }
+}
+
+.eth-colorized, .rsk-colorized {
+  border-radius: 1em;
 }
 
 
