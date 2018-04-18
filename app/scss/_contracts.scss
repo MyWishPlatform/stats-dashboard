@@ -65,6 +65,9 @@
     text-align: center;
     font-size: 3.8em;
     line-height: 1.5em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    font-weight: bold;
     img {
       height: 1.5em;
       vertical-align: middle;
@@ -103,17 +106,29 @@
     &.testnet {
       .eth-colorized {
         background-color: $ropsten-color;
+        &.title-colorized {
+          background-color: #fffdb2;
+        }
       }
       .rsk-colorized {
         background-color: #dafdd8;
+        &.title-colorized {
+          background-color: #befdc2;
+        }
       }
     }
     &.mainnet {
       .eth-colorized {
         background-color: #dffff1;
+        &.title-colorized {
+          background-color: #c7ffe1;
+        }
       }
       .rsk-colorized {
         background-color: #dff1ff;
+        &.title-colorized {
+          background-color: #c7eeff;
+        }
       }
     }
 
@@ -141,6 +156,11 @@
 
 .eth-colorized, .rsk-colorized {
   border-radius: 1em;
+  &.title-colorized {
+    border-right: 3px solid #fff;
+  }
 }
-
+.title-colorized {
+  padding-bottom: 5em;
+}
 
