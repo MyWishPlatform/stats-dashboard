@@ -59,7 +59,7 @@
         <div class="network-type"
              ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
             <div class="grid-row">
-                <div class="grid-cell grid-cell-1-5 grid-cell-ps-1">
+                <div class="grid-cell grid-cell-1-4 grid-cell-ps-1">
                     <div class="network-type__content">
                         <div class="grid-row with-padding">
                             <div class="grid-cell grid-cell-1">
@@ -76,92 +76,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-cell grid-cell-1-20">&nbsp;</div>
 
-
-
-                <div class="grid-cell grid-cell-3-4 grid-cell-ps-1">
-                    <div class="relative">
-
-                        <div class="network-type__content mainnet">
-                            <div class="grid-row">
-                                <div class="grid-cell grid-cell-4-9 grid-cell-s-1 eth-colorized">
-                                    <div class="grid-row with-padding">
-                                        <div class="grid-cell grid-cell-2-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="network-type__title text-center">
-                                                <img src="/static/images/eth-dark.svg">&nbsp;Ethereum
-                                            </div>
-                                        </div>
-                                        <div class="grid-cell grid-cell-3-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="contracts-statistics_info">
-                                                <div class="contracts-statistics_info__count text-left">
-                                                    {{networksKeys['MAINNET']['ETH'].contracts}}
-                                                </div>
-                                                <div class="contracts-statistics_info__count_new"
-                                                     ng-if="networksKeys['MAINNET']['ETH'].new_contracts">{{networksKeys['MAINNET']['ETH'].new_contracts}}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid-cell grid-cell-1-9 grid-cell-s-1">&nbsp;</div>
-                                <div class="grid-cell grid-cell-4-9 grid-cell-s-1 rsk-colorized">
-                                    <div class="grid-row with-padding">
-                                        <div class="grid-cell grid-cell-2-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="network-type__title text-center">
-                                                <img src="/static/images/rsk.png">&nbsp;RSK
-                                            </div>
-                                        </div>
-                                        <div class="grid-cell grid-cell-3-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="contracts-statistics_info">
-                                                <div class="contracts-statistics_info__count text-left">
-                                                    {{networksKeys['MAINNET']['RSK'].contracts}}
-                                                </div>
-                                                <div class="contracts-statistics_info__count_new"
-                                                     ng-if="networksKeys['MAINNET']['RSK'].new_contracts">{{networksKeys['MAINNET']['RSK'].new_contracts}}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="network-type__content testnet">
-                            <div class="grid-row">
-                                <div class="grid-cell grid-cell-4-9 grid-cell-s-1 eth-colorized">
-                                    <div class="grid-row with-padding">
-                                        <div class="grid-cell grid-cell-2-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="network-type__title text-center">
-                                                <img src="/static/images/eth-dark.svg">&nbsp;Ethereum
-                                            </div>
-                                        </div>
-                                        <div class="grid-cell grid-cell-3-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="contracts-statistics_info">
-                                                <div class="contracts-statistics_info__count text-left">
-                                                    {{networksKeys['TESTNET']['ETH'].contracts}}
-                                                </div>
-                                                <div class="contracts-statistics_info__count_new"
-                                                     ng-if="networksKeys['TESTNET']['ETH'].new_contracts">{{networksKeys['TESTNET']['ETH'].new_contracts}}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grid-cell grid-cell-1-9 grid-cell-s-1">&nbsp;</div>
-                                <div class="grid-cell grid-cell-4-9 grid-cell-s-1 rsk-colorized">
-                                    <div class="grid-row with-padding">
-                                        <div class="grid-cell grid-cell-2-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="network-type__title text-center">
-                                                <img src="/static/images/rsk.png">&nbsp;RSK
-                                            </div>
-                                        </div>
-                                        <div class="grid-cell grid-cell-3-5 grid-cell-ps-1 grid-cell-s-1-2">
-                                            <div class="contracts-statistics_info">
-                                                <div class="contracts-statistics_info__count text-left">
-                                                    {{networksKeys['TESTNET']['RSK'].contracts}}
-                                                </div>
-                                                <div class="contracts-statistics_info__count_new"
-                                                     ng-if="networksKeys['TESTNET']['RSK'].new_contracts">{{networksKeys['TESTNET']['RSK'].new_contracts}}</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 float-right">
+                    <div class="network-type__content">
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="network-type__content_short-text">
+                                    <span ng-class="{'bold': network == 'MAINNET'}">Mainnet</span>
+                                    /
+                                    <span ng-class="{bold: network == 'TESTNET'}">Testnet</span>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +98,12 @@
         <div class="network-type" ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
             <div class="network-type__content mainnet">
                 <div class="grid-row with-padding eth-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="network-type__title text-left">&nbsp;&nbsp;
+                            <img src="/static/images/eth-dark.svg">&nbsp;Ethereum
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].contract_type_0}}
@@ -187,7 +115,7 @@
                         </div>
                         <div class="contracts-statistics_name">Will</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].contract_type_4}}
@@ -199,7 +127,7 @@
                         </div>
                         <div class="contracts-statistics_name">Sale (CrowdSale)</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].contract_type_5}}
@@ -211,7 +139,7 @@
                         </div>
                         <div class="contracts-statistics_name">Token</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].contract_type_1}}
@@ -223,7 +151,7 @@
                         </div>
                         <div class="contracts-statistics_name">Lostkey</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].contract_type_2}}
@@ -237,7 +165,17 @@
                     </div>
                 </div>
                 <div class="grid-row with-padding eth-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="contracts-statistics_info">
+                            <div class="contracts-statistics_info__count">
+                                {{networksKeys['MAINNET']['ETH'].contracts}}
+                            </div>
+                            <div class="contracts-statistics_info__count_new"
+                                 ng-if="networksKeys['MAINNET']['ETH'].new_contracts">{{networksKeys['MAINNET']['ETH'].new_contracts}}</div>
+                            <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].created_contracts}}
@@ -247,7 +185,7 @@
                         </div>
                         <div class="contracts-statistics_name">Created</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].launch}}
@@ -257,7 +195,7 @@
                         </div>
                         <div class="contracts-statistics_name">Launch</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].active_contracts}}
@@ -268,7 +206,7 @@
                         </div>
                         <div class="contracts-statistics_name">Active</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].done}}
@@ -279,7 +217,7 @@
                         </div>
                         <div class="contracts-statistics_name">Done</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['ETH'].error}}
@@ -289,9 +227,14 @@
                         </div>
                         <div class="contracts-statistics_name">Error</div>
                     </div>
-                </div>
+                </div><br/><br/><br/>
                 <div class="grid-row with-padding rsk-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="network-type__title text-left">&nbsp;&nbsp;
+                            <img src="/static/images/rsk.png">&nbsp;RSK
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].contract_type_0}}
@@ -303,7 +246,7 @@
                         </div>
                         <div class="contracts-statistics_name">Will</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].contract_type_4}}
@@ -315,7 +258,7 @@
                         </div>
                         <div class="contracts-statistics_name">Sale (CrowdSale)</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].contract_type_5}}
@@ -327,7 +270,7 @@
                         </div>
                         <div class="contracts-statistics_name">Token</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].contract_type_1}}
@@ -339,7 +282,7 @@
                         </div>
                         <div class="contracts-statistics_name">Lostkey</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].contract_type_2}}
@@ -353,7 +296,17 @@
                     </div>
                 </div>
                 <div class="grid-row with-padding rsk-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="contracts-statistics_info">
+                            <div class="contracts-statistics_info__count">
+                                {{networksKeys['MAINNET']['RSK'].contracts}}
+                            </div>
+                            <div class="contracts-statistics_info__count_new"
+                                 ng-if="networksKeys['MAINNET']['RSK'].new_contracts">{{networksKeys['MAINNET']['RSK'].new_contracts}}</div>
+                            <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].created_contracts}}
@@ -363,7 +316,7 @@
                         </div>
                         <div class="contracts-statistics_name">Created</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].launch}}
@@ -373,7 +326,7 @@
                         </div>
                         <div class="contracts-statistics_name">Launch</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].active_contracts}}
@@ -384,7 +337,7 @@
                         </div>
                         <div class="contracts-statistics_name">Active</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].done}}
@@ -395,7 +348,7 @@
                         </div>
                         <div class="contracts-statistics_name">Done</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['MAINNET']['RSK'].error}}
@@ -409,7 +362,12 @@
             </div>
             <div class="network-type__content testnet">
                 <div class="grid-row with-padding eth-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="network-type__title text-left">&nbsp;&nbsp;
+                            <img src="/static/images/eth-dark.svg">&nbsp;Ethereum
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].contract_type_0}}
@@ -421,7 +379,7 @@
                         </div>
                         <div class="contracts-statistics_name">Will</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].contract_type_4}}
@@ -433,7 +391,7 @@
                         </div>
                         <div class="contracts-statistics_name">Sale (CrowdSale)</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].contract_type_5}}
@@ -445,7 +403,7 @@
                         </div>
                         <div class="contracts-statistics_name">Token</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].contract_type_1}}
@@ -457,7 +415,7 @@
                         </div>
                         <div class="contracts-statistics_name">Lostkey</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].contract_type_2}}
@@ -471,7 +429,17 @@
                     </div>
                 </div>
                 <div class="grid-row with-padding eth-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="contracts-statistics_info">
+                            <div class="contracts-statistics_info__count">
+                                {{networksKeys['TESTNET']['ETH'].contracts}}
+                            </div>
+                            <div class="contracts-statistics_info__count_new"
+                                 ng-if="networksKeys['TESTNET']['ETH'].new_contracts">{{networksKeys['TESTNET']['ETH'].new_contracts}}</div>
+                            <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].created_contracts}}
@@ -481,7 +449,7 @@
                         </div>
                         <div class="contracts-statistics_name">Created</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].launch}}
@@ -491,7 +459,7 @@
                         </div>
                         <div class="contracts-statistics_name">Launch</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].active_contracts}}
@@ -502,7 +470,7 @@
                         </div>
                         <div class="contracts-statistics_name">Active</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].done}}
@@ -513,7 +481,7 @@
                         </div>
                         <div class="contracts-statistics_name">Done</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['ETH'].error}}
@@ -523,9 +491,14 @@
                         </div>
                         <div class="contracts-statistics_name">Error</div>
                     </div>
-                </div>
+                </div><br/><br/><br/>
                 <div class="grid-row with-padding rsk-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="network-type__title text-left">&nbsp;&nbsp;
+                            <img src="/static/images/rsk.png">&nbsp;RSK
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].contract_type_0}}
@@ -537,7 +510,7 @@
                         </div>
                         <div class="contracts-statistics_name">Will</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].contract_type_4}}
@@ -549,7 +522,7 @@
                         </div>
                         <div class="contracts-statistics_name">Sale (CrowdSale)</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].contract_type_5}}
@@ -561,7 +534,7 @@
                         </div>
                         <div class="contracts-statistics_name">Token</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].contract_type_1}}
@@ -573,7 +546,7 @@
                         </div>
                         <div class="contracts-statistics_name">Lostkey</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].contract_type_2}}
@@ -587,7 +560,17 @@
                     </div>
                 </div>
                 <div class="grid-row with-padding rsk-colorized">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+                        <div class="contracts-statistics_info">
+                            <div class="contracts-statistics_info__count">
+                                {{networksKeys['TESTNET']['RSK'].contracts}}
+                            </div>
+                            <div class="contracts-statistics_info__count_new"
+                                 ng-if="networksKeys['TESTNET']['RSK'].new_contracts">{{networksKeys['TESTNET']['RSK'].new_contracts}}</div>
+                            <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].created_contracts}}
@@ -597,7 +580,7 @@
                         </div>
                         <div class="contracts-statistics_name">Created</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].launch}}
@@ -607,7 +590,7 @@
                         </div>
                         <div class="contracts-statistics_name">Launch</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].active_contracts}}
@@ -618,7 +601,7 @@
                         </div>
                         <div class="contracts-statistics_name">Active</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].done}}
@@ -629,7 +612,7 @@
                         </div>
                         <div class="contracts-statistics_name">Done</div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="contracts-statistics_info">
                             <div class="contracts-statistics_info__count">
                                 {{networksKeys['TESTNET']['RSK'].error}}
