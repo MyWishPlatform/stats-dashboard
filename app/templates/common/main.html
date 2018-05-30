@@ -232,32 +232,29 @@
                         </div>
                     </div>
                 </div>
-                <br/><br/><br/>
+                <br/>
                 <div class="grid-row">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 rsk-colorized title-colorized">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 rsk-colorized title-colorized title-colorized__small">
                         <div class="grid-row with-padding">
-                            <div class="grid-cell grid-cell-1">
-                                <div class="network-type__title">
+                            <div class="grid-cell grid-cell-2-5">
+                                <div class="network-type__title one-line-stat-title">
                                     <img src="/static/images/rsk.png">&nbsp;RSK
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="grid-row with-padding">
-                            <div class="grid-cell grid-cell-1">
+                            <div class="grid-cell grid-cell-3-5">
                                 <div class="contracts-statistics_info">
                                     <div class="contracts-statistics_info__count">
                                         {{networksKeys['MAINNET']['RSK'].contracts}}
                                     </div>
                                     <div class="contracts-statistics_info__count_new"
                                          ng-if="networksKeys['MAINNET']['RSK'].new_contracts">{{networksKeys['MAINNET']['RSK'].new_contracts}}</div>
-                                    <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                                    <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-4-5  grid-cell-s-1">
-                        <div class="grid-row rsk-colorized with-padding">
+                        <!-- div class="grid-row rsk-colorized with-padding">
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                                 <div class="contracts-statistics_info">
                                     <div class="contracts-statistics_info__count">
@@ -313,7 +310,7 @@
                                 </div>
                                 <div class="contracts-statistics_name">Deferred</div>
                             </div>
-                        </div>
+                        </div -->
                         <div class="grid-row with-padding rsk-colorized">
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                                 <div class="contracts-statistics_info">
@@ -362,6 +359,142 @@
                                     </div>
                                     <div class="contracts-statistics_info__count_new_error"
                                          ng-if="networksKeys['MAINNET']['RSK'].now_error">{{networksKeys['MAINNET']['RSK'].now_error}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Error</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="grid-row">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized">
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="network-type__title">
+                                    <img src="/static/images/neo.png">&nbsp;NEO
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].new_contracts">{{networksKeys['MAINNET']['NEO'].new_contracts}}</div>
+                                    <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
+                        <div class="grid-row neo-colorized with-padding">
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contract_type_0}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].contract_type_0_new">{{networksKeys['MAINNET']['NEO'].contract_type_0_new}}</div>
+                                    <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Will</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contract_type_4}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].contract_type_4_new">{{networksKeys['MAINNET']['NEO'].contract_type_4_new}}</div>
+                                    <i class="icon-crowdsale contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Sale (CrowdSale)</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contract_type_5}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].contract_type_5_new">{{networksKeys['MAINNET']['NEO'].contract_type_5_new}}</div>
+                                    <i class="icon-token contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Token</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contract_type_1}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].contract_type_1_new">{{networksKeys['MAINNET']['NEO'].contract_type_1_new}}</div>
+                                    <i class="icon-key contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Lostkey</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].contract_type_2}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].contract_type_2_new">{{networksKeys['MAINNET']['NEO'].contract_type_2_new}}</div>
+                                    <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Deferred</div>
+                            </div>
+                        </div>
+                        <div class="grid-row neo-colorized with-padding">
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].created_contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].now_created">{{networksKeys['MAINNET']['NEO'].now_created}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Created</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].launch}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].launch">{{networksKeys['MAINNET']['NEO'].launch}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Launch</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].active_contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].now_active">{{networksKeys['MAINNET']['NEO'].now_active}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Active</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].done}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['MAINNET']['NEO'].now_done">{{networksKeys['MAINNET']['NEO'].now_done}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Done</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['MAINNET']['NEO'].error}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new_error"
+                                         ng-if="networksKeys['MAINNET']['NEO'].now_error">{{networksKeys['MAINNET']['NEO'].now_error}}</div>
                                 </div>
                                 <div class="contracts-statistics_name">Error</div>
                             </div>
@@ -440,16 +573,16 @@
                                 <div class="contracts-statistics_name">Lostkey</div>
                             </div>
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
-                        <div class="contracts-statistics_info">
-                            <div class="contracts-statistics_info__count">
-                                {{networksKeys['TESTNET']['ETH'].contract_type_2}}
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['ETH'].contract_type_2}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['ETH'].contract_type_2_new">{{networksKeys['TESTNET']['ETH'].contract_type_2_new}}</div>
+                                    <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Deferred</div>
                             </div>
-                            <div class="contracts-statistics_info__count_new"
-                                 ng-if="networksKeys['TESTNET']['ETH'].contract_type_2_new">{{networksKeys['TESTNET']['ETH'].contract_type_2_new}}</div>
-                            <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
-                        </div>
-                        <div class="contracts-statistics_name">Deferred</div>
-                    </div>
                         </div>
                         <div class="grid-row eth-colorized with-padding">
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
@@ -504,33 +637,30 @@
                             </div>
                         </div>
                     </div>
-                </div><br/><br/><br/>
+                </div><br/>
 
                 <div class="grid-row">
-                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 rsk-colorized title-colorized">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 rsk-colorized title-colorized title-colorized__small">
                         <div class="grid-row with-padding">
-                            <div class="grid-cell grid-cell-1">
-                                <div class="network-type__title">
+                            <div class="grid-cell grid-cell-2-5">
+                                <div class="network-type__title one-line-stat-title">
                                     <img src="/static/images/rsk.png">&nbsp;RSK
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="grid-row with-padding">
-                            <div class="grid-cell grid-cell-1">
+                            <div class="grid-cell grid-cell-3-5">
                                 <div class="contracts-statistics_info">
                                     <div class="contracts-statistics_info__count">
                                         {{networksKeys['TESTNET']['RSK'].contracts}}
                                     </div>
                                     <div class="contracts-statistics_info__count_new"
                                          ng-if="networksKeys['TESTNET']['RSK'].new_contracts">{{networksKeys['TESTNET']['RSK'].new_contracts}}</div>
-                                    <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                                    <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
-                        <div class="grid-row rsk-colorized with-padding">
+                        <!-- div class="grid-row rsk-colorized with-padding">
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                                 <div class="contracts-statistics_info">
                                     <div class="contracts-statistics_info__count">
@@ -586,7 +716,7 @@
                                 </div>
                                 <div class="contracts-statistics_name">Deferred</div>
                             </div>
-                        </div>
+                        </div -->
                         <div class="grid-row rsk-colorized with-padding">
                             <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                                 <div class="contracts-statistics_info">
@@ -635,6 +765,142 @@
                                     </div>
                                     <div class="contracts-statistics_info__count_new_error"
                                          ng-if="networksKeys['TESTNET']['RSK'].now_error">{{networksKeys['TESTNET']['RSK'].now_error}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Error</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="grid-row">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized">
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="network-type__title">
+                                    <img src="/static/images/neo.png">&nbsp;NEO
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].new_contracts">{{networksKeys['TESTNET']['NEO'].new_contracts}}</div>
+                                    <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
+                        <div class="grid-row neo-colorized with-padding">
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contract_type_0}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].contract_type_0_new">{{networksKeys['TESTNET']['NEO'].contract_type_0_new}}</div>
+                                    <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Will</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contract_type_4}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].contract_type_4_new">{{networksKeys['TESTNET']['NEO'].contract_type_4_new}}</div>
+                                    <i class="icon-crowdsale contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Sale (CrowdSale)</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contract_type_5}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].contract_type_5_new">{{networksKeys['TESTNET']['NEO'].contract_type_5_new}}</div>
+                                    <i class="icon-token contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Token</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contract_type_1}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].contract_type_1_new">{{networksKeys['TESTNET']['NEO'].contract_type_1_new}}</div>
+                                    <i class="icon-key contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Lostkey</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].contract_type_2}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].contract_type_2_new">{{networksKeys['TESTNET']['NEO'].contract_type_2_new}}</div>
+                                    <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                                <div class="contracts-statistics_name">Deferred</div>
+                            </div>
+                        </div>
+                        <div class="grid-row neo-colorized with-padding">
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].created_contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].now_created">{{networksKeys['TESTNET']['NEO'].now_created}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Created</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].launch}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].launch">{{networksKeys['TESTNET']['NEO'].launch}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Launch</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].active_contracts}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].now_active">{{networksKeys['TESTNET']['NEO'].now_active}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Active</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].done}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="networksKeys['TESTNET']['NEO'].now_done">{{networksKeys['TESTNET']['NEO'].now_done}}</div>
+                                </div>
+                                <div class="contracts-statistics_name">Done</div>
+                            </div>
+                            <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{networksKeys['TESTNET']['NEO'].error}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new_error"
+                                         ng-if="networksKeys['TESTNET']['NEO'].now_error">{{networksKeys['TESTNET']['NEO'].now_error}}</div>
                                 </div>
                                 <div class="contracts-statistics_name">Error</div>
                             </div>

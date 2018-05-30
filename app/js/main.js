@@ -40,11 +40,13 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
             $rootScope.networksKeys = {
                 MAINNET: {
                     RSK: response.data['RSK_MAINNET'],
-                    ETH: response.data['ETHEREUM_MAINNET']
+                    ETH: response.data['ETHEREUM_MAINNET'],
+                    NEO: response.data['NEO_MAINNET']
                 },
                 TESTNET: {
                     RSK: response.data['RSK_TESTNET'],
-                    ETH: response.data['ETHEREUM_ROPSTEN']
+                    ETH: response.data['ETHEREUM_ROPSTEN'],
+                    NEO: response.data['NEO_TESTNET']
                 }
             };
         });

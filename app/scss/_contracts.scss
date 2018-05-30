@@ -1,6 +1,6 @@
 .contracts-statistics {
   + .contracts-statistics {
-    margin-top: 3em;
+    //margin-top: 1em;
   }
   &_info {
     text-align: center;
@@ -12,7 +12,7 @@
       text-align: center;
     }
     &__count_new, &__count_new_error {
-      font-size: 5.5em;
+      font-size: 4.5em;
       font-weight: bold;
       position: absolute;
       right: 0.2em;
@@ -47,7 +47,7 @@
   }
   .grid-row {
     + .grid-row {
-      margin-top: 1em;
+      margin-top: 0.5em;
     }
   }
 }
@@ -68,6 +68,9 @@
     padding-top: 0.6em;
     padding-bottom: 0.6em;
     font-weight: bold;
+    &.one-line-stat-title {
+      padding-top: 0;
+    }
     img {
       height: 1.5em;
       vertical-align: middle;
@@ -83,10 +86,11 @@
   &__content {
     transition: opacity linear 1s;
     position: relative;
+    font-size: 0.9em;
+    text-align: right;
     &_short-text {
-      font-size: 3.5em;
-      line-height: 1.2em;
-      padding: 0.25em;
+      font-size: 5em;
+      line-height: 1em;
       color: #aaa;
       font-weight: bold;
       span {
@@ -116,6 +120,12 @@
           background-color: #befdc2;
         }
       }
+      .neo-colorized {
+        background-color: #fff5e5;
+        &.title-colorized {
+          background-color: #f0f7d8;
+        }
+      }
     }
     &.mainnet {
       .eth-colorized {
@@ -130,11 +140,13 @@
           background-color: #c7eeff;
         }
       }
+      .neo-colorized {
+        background-color: #d0ffb8;
+        &.title-colorized {
+          background-color: #c0eaa9;
+        }
+      }
     }
-
-
-
-
   }
   &.mainnet &__content {
     &.testnet {
@@ -154,13 +166,21 @@
   }
 }
 
-.eth-colorized, .rsk-colorized {
+.eth-colorized, .rsk-colorized, .neo-colorized {
   border-radius: 1em;
   &.title-colorized {
-    border-right: 3px solid #fff;
+    border-right: 3px solid #f6f6f7;
   }
 }
 .title-colorized {
   padding-bottom: 5em;
+  &__small {
+    padding-top: 2.264em;
+    padding-bottom: 2.264em;
+    .network-type__title {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
