@@ -1,0 +1,73 @@
+<div class="grid-cell grid-cell-1-5 grid-cell-s-1 rsk-colorized title-colorized title-colorized__small">
+    <div class="grid-row with-padding">
+        <div class="grid-cell grid-cell-2-5">
+            <div class="network-type__title one-line-stat-title">
+                <img src="/static/images/rsk.png">&nbsp;RSK
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-3-5">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['RSK'].new_contracts">{{networksKeys[net]['RSK'].new_contracts}}</div>
+                <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid-cell grid-cell-4-5  grid-cell-s-1">
+    <div class="grid-row with-padding rsk-colorized">
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].created_contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['RSK'].now_created">{{networksKeys[net]['RSK'].now_created}}</div>
+            </div>
+            <div class="contracts-statistics_name">Created</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].launch}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['RSK'].launch">{{networksKeys[net]['RSK'].launch}}</div>
+            </div>
+            <div class="contracts-statistics_name">Launch</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].active_contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['RSK'].now_active">{{networksKeys[net]['RSK'].now_active}}</div>
+            </div>
+            <div class="contracts-statistics_name">Active</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].done}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['RSK'].now_done">{{networksKeys[net]['RSK'].now_done}}</div>
+            </div>
+            <div class="contracts-statistics_name">Done</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['RSK'].error}}
+                </div>
+                <div class="contracts-statistics_info__count_new_error"
+                     ng-if="networksKeys[net]['RSK'].now_error">{{networksKeys[net]['RSK'].now_error}}</div>
+            </div>
+            <div class="contracts-statistics_name">Error</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<div class="all-info-container" ng-if="statistics">
+    <div class="grid-row">
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.wish_usd_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.wish_usd_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
+                    WISH
+                </div>
+                <div class="currency-info-block_rate">${{statistics.currency_statistics.wish_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    <div class="float-right">Rank <b>{{statistics.currency_statistics.mywish_rank}}</b></div>
+                    {{statistics.currency_statistics.wish_usd_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.wish_usd_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.wish_eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.wish_eth_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
+                    ETH
+                </div>
+                <div class="currency-info-block_rate">{{statistics.currency_statistics.wish_price_eth}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.currency_statistics.wish_eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.wish_eth_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.btc_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.btc_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/btc.svg">
+                    BTC
+                </div>
+                <div class="currency-info-block_rate">${{statistics.currency_statistics.btc_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.currency_statistics.btc_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.btc_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="currency-info-block"
+                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.eth_percent_change_24h < 0}">
+                <div class="currency-info-block_title">
+                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
+                    ETH
+                </div>
+                <div class="currency-info-block_rate">${{statistics.currency_statistics.eth_price_usd}}</div>
+                <div class="currency-info-block_range">
+                    {{statistics.currency_statistics.eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.eth_percent_change_24h}}%
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contracts-statistics">
+        <div class="network-type"
+             ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
+            <div class="grid-row">
+                <div class="grid-cell grid-cell-1-4 grid-cell-ps-1">
+                    <div class="network-type__content">
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="contracts-statistics_info">
+                                    <div class="contracts-statistics_info__count">
+                                        {{statistics.user_statistics.users}}
+                                    </div>
+                                    <div class="contracts-statistics_info__count_new" ng-if="statistics.user_statistics.new_users">
+                                        {{statistics.user_statistics.new_users}}
+                                    </div>
+                                    <i class="icon-account contracts-statistics_info__icon blue-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 float-right">
+                    <div class="network-type__content">
+                        <div class="grid-row with-padding">
+                            <div class="grid-cell grid-cell-1">
+                                <div class="network-type__content_short-text">
+                                    <span ng-class="{'bold': network == 'MAINNET'}">Mainnet</span>
+                                    /
+                                    <span ng-class="{bold: network == 'TESTNET'}">Testnet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contracts-statistics">
+        <div class="network-type" ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
+            <div class="network-type__content mainnet" ng-include="'/templates/mainnet.html'"></div>
+            <div class="network-type__content testnet" ng-include="'/templates/testnet.html'"></div>
+        </div>
+    </div>
+</div>
+
+
