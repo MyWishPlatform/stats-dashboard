@@ -22,7 +22,7 @@
 </div>
 <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
     <div class="grid-row eth-colorized with-padding">
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_0}}
@@ -33,7 +33,7 @@
             </div>
             <div class="contracts-statistics_name">Will</div>
         </div>
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_4}}
@@ -44,7 +44,7 @@
             </div>
             <div class="contracts-statistics_name">Sale (CrowdSale)</div>
         </div>
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_5}}
@@ -55,7 +55,7 @@
             </div>
             <div class="contracts-statistics_name">Token</div>
         </div>
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_1}}
@@ -66,7 +66,7 @@
             </div>
             <div class="contracts-statistics_name">Lostkey</div>
         </div>
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_2}}
@@ -78,7 +78,7 @@
             <div class="contracts-statistics_name">Deferred</div>
         </div>
 
-        <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contract_type_8}}
@@ -89,7 +89,20 @@
             </div>
             <div class="contracts-statistics_name">Airdrop</div>
         </div>
+
+        <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['ETH'].contract_type_9}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['ETH'].contract_type_9_new">{{networksKeys[net]['ETH'].contract_type_9_new}}</div>
+                <i class="icon-ice contracts-statistics_info__icon blue-color"></i>
+            </div>
+            <div class="contracts-statistics_name">iPool</div>
+        </div>
     </div>
+
     <div class="grid-row eth-colorized with-padding">
         <div class="grid-cell grid-cell-1-12 hide-s">&nbsp;</div>
         <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">

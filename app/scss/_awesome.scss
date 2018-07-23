@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?2sq03a');
-  src:  url('fonts/icomoon.eot?2sq03a#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?2sq03a') format('truetype'),
-  url('fonts/icomoon.woff?2sq03a') format('woff'),
-  url('fonts/icomoon.svg?2sq03a#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?cwkr8p');
+  src:  url('fonts/icomoon.eot?cwkr8p#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?cwkr8p') format('truetype'),
+  url('fonts/icomoon.woff?cwkr8p') format('woff'),
+  url('fonts/icomoon.svg?cwkr8p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ice:before {
+  content: "\e908";
+}
 .icon-airdrop:before {
   content: "\e907";
 }
@@ -48,3 +51,4 @@
 .icon-contracts:before {
   content: "\e906";
 }
+
