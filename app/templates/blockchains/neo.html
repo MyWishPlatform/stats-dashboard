@@ -1,4 +1,24 @@
-<div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized">
+<div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized title-colorized__small">
+    <div class="grid-row with-padding">
+        <div class="grid-cell grid-cell-2-5">
+            <div class="network-type__title one-line-stat-title">
+                <img src="/static/images/neo.png">&nbsp;NEO
+            </div>
+        </div>
+        <div class="grid-cell grid-cell-3-5">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['NEO'].contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['NEO'].new_contracts">{{networksKeys[net]['NEO'].new_contracts}}</div>
+                <!--<i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized">
     <div class="grid-row with-padding">
         <div class="grid-cell grid-cell-1">
             <div class="network-type__title">
@@ -19,9 +39,9 @@
             </div>
         </div>
     </div>
-</div>
+</div -->
 <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
-    <div class="grid-row neo-colorized with-padding">
+    <!-- div class="grid-row neo-colorized with-padding">
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
@@ -77,7 +97,7 @@
             </div>
             <div class="contracts-statistics_name">Deferred</div>
         </div>
-    </div>
+    </div -->
     <div class="grid-row neo-colorized with-padding">
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">

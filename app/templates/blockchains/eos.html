@@ -1,0 +1,100 @@
+<div class="grid-cell grid-cell-1-5 grid-cell-s-1 eos-colorized title-colorized">
+    <div class="grid-row with-padding">
+        <div class="grid-cell grid-cell-1">
+            <div class="network-type__title">
+                <img src="/static/images/eos.svg">&nbsp;EOS
+            </div>
+        </div>
+    </div>
+    <div class="grid-row with-padding">
+        <div class="grid-cell grid-cell-1">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].new_contracts">{{networksKeys[net]['EOS'].new_contracts}}</div>
+                <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid-cell grid-cell-4-5 grid-cell-s-1">
+    <div class="grid-row eos-colorized with-padding">
+        <div class="grid-cell grid-cell-3-10">&nbsp;</div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].contract_type_10}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].contract_type_10_new">{{networksKeys[net]['EOS'].contract_type_10_new}}</div>
+                <i class="icon-token-eos contracts-statistics_info__icon blue-color"></i>
+            </div>
+            <div class="contracts-statistics_name">Token</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].contract_type_11}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].contract_type_11_new">{{networksKeys[net]['EOS'].contract_type_11_new}}</div>
+                <i class="icon-eosw contracts-statistics_info__icon blue-color"></i>
+            </div>
+            <div class="contracts-statistics_name">Account</div>
+        </div>
+    </div>
+    <div class="grid-row eos-colorized with-padding">
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].created_contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].now_created">{{networksKeys[net]['EOS'].now_created}}</div>
+            </div>
+            <div class="contracts-statistics_name">Created</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].launch}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].launch">{{networksKeys[net]['EOS'].launch}}</div>
+            </div>
+            <div class="contracts-statistics_name">Launch</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].active_contracts}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].now_active">{{networksKeys[net]['EOS'].now_active}}</div>
+            </div>
+            <div class="contracts-statistics_name">Active</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].done}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].now_done">{{networksKeys[net]['EOS'].now_done}}</div>
+            </div>
+            <div class="contracts-statistics_name">Done</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].error}}
+                </div>
+                <div class="contracts-statistics_info__count_new_error"
+                     ng-if="networksKeys[net]['EOS'].now_error">{{networksKeys[net]['EOS'].now_error}}</div>
+            </div>
+            <div class="contracts-statistics_name">Error</div>
+        </div>
+    </div>
+</div>
