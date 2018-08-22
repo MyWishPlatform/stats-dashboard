@@ -115,35 +115,35 @@
 
     &.testnet {
       .eth-colorized {
-        background-color: $ropsten-color;
+        background-color: #fffebb;
         &.title-colorized {
           background-color: #fffdb2;
+        }
+      }
+      .rsk-colorized, .eos-colorized {
+        background-color: #fff7a3;
+        &.title-colorized {
+          background-color: #ffeb98;
+        }
+      }
+      .neo-colorized {
+        background-color: #fff9d8;
+        &.title-colorized {
+          background-color: #fff3cc;
+        }
+      }
+    }
+    &.mainnet {
+      .eth-colorized {
+        background-color: #cdffdc;
+        &.title-colorized {
+          background-color: #c2ffd2;
         }
       }
       .rsk-colorized, .eos-colorized {
         background-color: #dafdd8;
         &.title-colorized {
           background-color: #befdc2;
-        }
-      }
-      .neo-colorized {
-        background-color: #fff5e5;
-        &.title-colorized {
-          background-color: #f0f7d8;
-        }
-      }
-    }
-    &.mainnet {
-      .eth-colorized {
-        background-color: #dffff1;
-        &.title-colorized {
-          background-color: #c7ffe1;
-        }
-      }
-      .rsk-colorized, .eos-colorized {
-        background-color: #dff1ff;
-        &.title-colorized {
-          background-color: #c7eeff;
         }
       }
       .neo-colorized {
