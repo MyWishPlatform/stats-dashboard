@@ -47,6 +47,8 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
 
 
             response.data.currency_statistics.eosish_price_usd = Math.round(response.data.currency_statistics.eosish_price_usd * 10000) / 10000;
+            // response.data.currency_statistics.eos_price_usd = Math.round(response.data.currency_statistics.eos_price_usd * 10000) / 10000;
+
 
             // console.log(response.data);
             $rootScope.networksKeys = {
