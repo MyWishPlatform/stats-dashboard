@@ -11,12 +11,20 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
     var networksList = ['MAINNET', 'TESTNET'];
     $rootScope.network = 'MAINNET';
 
+    $rootScope.currencyStats = 'WISH';
+
     $interval(function() {
         var index = networksList.indexOf($rootScope.network);
         var nextIndex = index + 1;
         nextIndex = nextIndex >= networksList.length ? 0 : nextIndex;
         $rootScope.network = networksList[nextIndex];
+    }, 7500);
+
+    $interval(function() {
+        $rootScope.currencyStats = ($rootScope.currencyStats === 'WISH' ? 'EOSISH' : 'WISH');
     }, 15000);
+
+
 
     var updateStatistics = function() {
         $http.get(API_CONSTANTS.HOSTS.PATH + API_CONSTANTS.GET_STATISTICS).then(function(response) {
@@ -36,6 +44,10 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
             response.data.currency_statistics.wish_eth_percent_change_24h = Math.round(percentChangeWishEth * 100) / 100;
             response.data.currency_statistics.wish_price_usd = Math.round(response.data.currency_statistics.wish_price_usd * 100) / 100;
             response.data.currency_statistics.wish_price_eth = Math.round(response.data.currency_statistics.wish_price_eth * 100000) / 100000;
+
+
+            response.data.currency_statistics.eosish_price_usd = Math.round(response.data.currency_statistics.eosish_price_usd * 10000) / 10000;
+
             // console.log(response.data);
             $rootScope.networksKeys = {
                 MAINNET: {

@@ -21,7 +21,6 @@
 </div>
 <div class="grid-cell grid-cell-4-5 grid-cell-s-1">
     <div class="grid-row eos-colorized with-padding">
-        <div class="grid-cell grid-cell-1-5">&nbsp;</div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
@@ -54,6 +53,28 @@
                 <i class="icon-eos-ico contracts-statistics_info__icon blue-color"></i>
             </div>
             <div class="contracts-statistics_name">Crowdsale</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].contract_type_14}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].contract_type_14_new">{{networksKeys[net]['EOS'].contract_type_14_new}}</div>
+                <i class="icon-token-eos contracts-statistics_info__icon blue-color"></i>
+            </div>
+            <div class="contracts-statistics_name">I Token</div>
+        </div>
+        <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
+            <div class="contracts-statistics_info">
+                <div class="contracts-statistics_info__count">
+                    {{networksKeys[net]['EOS'].contract_type_13}}
+                </div>
+                <div class="contracts-statistics_info__count_new"
+                     ng-if="networksKeys[net]['EOS'].contract_type_13_new">{{networksKeys[net]['EOS'].contract_type_13_new}}</div>
+                <i class="icon-airdrop contracts-statistics_info__icon blue-color"></i>
+            </div>
+            <div class="contracts-statistics_name">Airdrop</div>
         </div>
     </div>
     <div class="grid-row eos-colorized with-padding">

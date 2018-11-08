@@ -33,7 +33,23 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: 96%;
-  padding-top: 2em;
+  margin-top: 2em;
+  position: relative;
+}
+
+.currency-stat {
+  opacity: 1;
+  transition: opacity 0.7s linear;
+  & ~ .currency-stat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.hidden-stat {
+    opacity: 0;
+  }
 }
 
 .registrations-statistics {
