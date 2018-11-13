@@ -34,3 +34,29 @@
   }
 }
 
+
+
+.balances-statistics {
+  .network-type__content {
+    text-align: left;
+    color: #fff;
+  }
+  &_item {
+    border-radius: 0.4em;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
+    padding: 1em;
+    font-size: 3.5em;
+    line-height: 1.4em;
+    margin: 0 0 0.5em 0;
+    &__positive {
+      background-color: rgba(0, 136, 23, 0.12);
+    }
+    &__negative {
+      background-color: rgba(236, 83, 48, 0.35);
+    }
+  }
+}
+
+
+

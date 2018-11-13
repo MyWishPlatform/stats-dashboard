@@ -72,8 +72,9 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
 }).run(function() {
 
 }).config(function($httpProvider, $qProvider, $compileProvider) {
-    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+    // $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    // $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     $qProvider.errorOnUnhandledRejections(false);
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(mailto|otpauth|https?):/);
 });
