@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid-cell grid-cell-1-3 grid-cell-ps-1 grid-cell-s-1-2">
+        <div class="grid-cell grid-cell-1-3 grid-cell-s-1">
             <div class="currency-info-block"
                  ng-class="{'currency-info-block__positive': statistics.currency_statistics.eos_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.eos_percent_change_24h < 0}">
                 <div class="currency-info-block_title">
@@ -153,18 +153,18 @@
         <div class="network-type" ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
             <div class="network-type__content mainnet">
                 <div class="grid-row">
-                    <div class="grid-cell grid-cell-1-5">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
-                             'balances-statistics_item__positive': statistics.balances_statistics.eth_account_balance >= 10,
-                             'balances-statistics_item__negative': statistics.balances_statistics.eth_account_balance < 10
+                             'balances-statistics_item__positive': statistics.balances_statistics.eth_account_balance >= 1,
+                             'balances-statistics_item__negative': statistics.balances_statistics.eth_account_balance < 1
                              }">
                             <b>ETH:</b><br/>
                             {{ statistics.balances_statistics.eth_account_balance|number:3 }}
                         </div>
                     </div>
 
-                    <div class="grid-cell grid-cell-1-5">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_account_balance >= 50,
@@ -174,21 +174,21 @@
                             {{ statistics.balances_statistics.eos_account_balance }}
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_net_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_net_builder >= 90}">
                             <b>NET:</b><br/>
                             {{ statistics.balances_statistics.eos_net_builder|number:4 }} %
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_cpu_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_cpu_builder >= 90}">
                             <b>CPU:</b><br/>
                             {{ statistics.balances_statistics.eos_cpu_builder|number:4 }} %
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-5">
+                    <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_ram_builder >= 40,
@@ -202,11 +202,11 @@
             </div>
             <div class="network-type__content testnet">
                 <div class="grid-row">
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
-                             'balances-statistics_item__positive': statistics.balances_statistics.eth_test_account_balance >= 10,
-                             'balances-statistics_item__negative': statistics.balances_statistics.eth_test_account_balance < 10
+                             'balances-statistics_item__positive': statistics.balances_statistics.eth_test_account_balance >= 1,
+                             'balances-statistics_item__negative': statistics.balances_statistics.eth_test_account_balance < 1
                              }">
                             <b>ETH:</b><br/>
                             {{ statistics.balances_statistics.eth_test_account_balance|number:3 }}
@@ -219,7 +219,7 @@
                             <!--{{ statistics.balances_statistics.neo_test_balance|number:3 }}-->
                         <!--</div>-->
                     <!--</div>-->
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.gas_test_balance >= 5000,
@@ -229,7 +229,7 @@
                             {{ statistics.balances_statistics.gas_test_balance|number:3 }}
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_test_account_balance >= 50,
@@ -239,21 +239,21 @@
                             {{ statistics.balances_statistics.eos_test_account_balance }}
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_net_test_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_net_test_builder >= 90}">
                             <b>NET:</b><br/>
                             {{ statistics.balances_statistics.eos_net_test_builder|number:4 }} %
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_cpu_test_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_cpu_test_builder >= 90}">
                             <b>CPU:</b><br/>
                             {{ statistics.balances_statistics.eos_cpu_test_builder|number:4 }} %
                         </div>
                     </div>
-                    <div class="grid-cell grid-cell-1-6">
+                    <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_ram_test_builder >= 40,
