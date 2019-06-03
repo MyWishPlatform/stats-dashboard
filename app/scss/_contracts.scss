@@ -10,9 +10,10 @@
       margin: 0 0.5em;
     }
     &__count {
-      font-size: 5.5em;
+      font-size: 5em;
       font-weight: bold;
       text-align: center;
+      line-height: 1.2em;
     }
     &__count_new, &__count_new_error {
       font-size: 4.5em;
@@ -51,11 +52,11 @@
       margin: 0 0.25em;
     }
   }
-  .grid-row {
-    + .grid-row {
-      margin-top: 0.5em;
-    }
-  }
+  //.grid-row {
+  //  + .grid-row {
+  //    margin-top: 0.5em;
+  //  }
+  //}
 }
 
 .grid-row {
@@ -66,13 +67,15 @@
 }
 .network-type {
   position: relative;
+  > .grid-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
   &__title {
     color: #444;
     text-align: center;
     font-size: 3.8em;
     line-height: 1.5em;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
     font-weight: bold;
     &.one-line-stat-title {
       padding-top: 0;
@@ -96,7 +99,7 @@
     text-align: right;
     &_short-text {
       font-size: 5em;
-      line-height: 1em;
+      //line-height: 1em;
       color: #aaa;
       font-weight: bold;
       span {
@@ -116,41 +119,29 @@
     &.testnet {
       .eth-colorized {
         background-color: #fffebb;
-        &.title-colorized {
-          background-color: #fffdb2;
-        }
       }
       .rsk-colorized, .eos-colorized {
         background-color: #fff7a3;
-        &.title-colorized {
-          background-color: #ffeb98;
-        }
       }
       .neo-colorized {
         background-color: #fff9d8;
-        &.title-colorized {
-          background-color: #fff3cc;
-        }
+      }
+      .tron-colorized {
+        background-color: #fff184;
       }
     }
     &.mainnet {
       .eth-colorized {
         background-color: #cdffdc;
-        &.title-colorized {
-          background-color: #c2ffd2;
-        }
       }
       .rsk-colorized, .eos-colorized {
         background-color: #dafdd8;
-        &.title-colorized {
-          background-color: #befdc2;
-        }
       }
       .neo-colorized {
         background-color: #d0ffb8;
-        &.title-colorized {
-          background-color: #c0eaa9;
-        }
+      }
+      .tron-colorized {
+        background-color: #e3ffab;
       }
     }
   }
@@ -173,16 +164,18 @@
 }
 
 .eth-colorized, .rsk-colorized, .neo-colorized {
-  border-radius: 1em;
-  &.title-colorized {
-    border-right: 3px solid #f6f6f7;
+  .title-colorized {
+    //border-right: 3px solid #f6f6f7;
+    //background-color: rgba(255, 255, 255, 0.05);
   }
 }
 .title-colorized {
-  padding-bottom: 5em;
+  padding-top: 5.5em;
+  padding-bottom: 5.5em;
+  background-color: rgba(0, 0, 0, 0.05);
   &__small {
-    padding-top: 2.264em;
-    padding-bottom: 2.264em;
+    padding-top: 0;
+    padding-bottom: 0;
     .network-type__title {
       padding-top: 0;
       padding-bottom: 0;
@@ -190,3 +183,53 @@
   }
 }
 
+
+.contracts-info-row {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  > .grid-cell {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+}
+.contracts-counts-rows {
+  > .grid-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  > .grid-row + .grid-row {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: -1px;
+  }
+  > .grid-row > .grid-cell {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    + .grid-cell {
+      border-left: 1px solid rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.statuses-row {
+  .grid-cell {
+    &:nth-child(1) {
+      border-left: 3px solid #ffffff!important;
+    }
+    &:nth-child(2) {
+      border-left: 3px solid #fd821a!important;
+    }
+    &:nth-child(3) {
+      border-left: 3px solid #4bff15!important;
+    }
+    &:nth-child(4) {
+      border-left: 3px solid #28870d!important;
+    }
+    &:nth-child(5) {
+      border-left: 3px solid #a90202!important;
+    }
+  }
+}

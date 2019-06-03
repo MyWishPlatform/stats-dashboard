@@ -1,4 +1,4 @@
-<div class="grid-cell grid-cell-1-5 grid-cell-s-1 neo-colorized title-colorized title-colorized__small">
+<div class="grid-cell grid-cell-1-5 grid-cell-s-1 title-colorized title-colorized__small">
     <div class="grid-row with-padding">
         <div class="grid-cell grid-cell-2-5">
             <div class="network-type__title one-line-stat-title">
@@ -40,7 +40,7 @@
         </div>
     </div>
 </div -->
-<div class="grid-cell grid-cell-4-5 grid-cell-s-1">
+<div class="grid-cell grid-cell-4-5 grid-cell-s-1  contracts-counts-rows">
     <!-- div class="grid-row neo-colorized with-padding">
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -98,7 +98,7 @@
             <div class="contracts-statistics_name">Deferred</div>
         </div>
     </div -->
-    <div class="grid-row neo-colorized with-padding">
+    <div class="grid-row statuses-row">
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
@@ -107,7 +107,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['NEO'].now_created">{{networksKeys[net]['NEO'].now_created}}</div>
             </div>
-            <div class="contracts-statistics_name">Created</div>
+            <!--<div class="contracts-statistics_name">Created</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -117,7 +117,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['NEO'].launch">{{networksKeys[net]['NEO'].launch}}</div>
             </div>
-            <div class="contracts-statistics_name">Launch</div>
+            <!--<div class="contracts-statistics_name">Launch</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -127,7 +127,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['NEO'].now_active">{{networksKeys[net]['NEO'].now_active}}</div>
             </div>
-            <div class="contracts-statistics_name">Active</div>
+            <!--<div class="contracts-statistics_name">Active</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -137,7 +137,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['NEO'].now_done">{{networksKeys[net]['NEO'].now_done}}</div>
             </div>
-            <div class="contracts-statistics_name">Done</div>
+            <!--<div class="contracts-statistics_name">Done</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -147,7 +147,7 @@
                 <div class="contracts-statistics_info__count_new_error"
                      ng-if="networksKeys[net]['NEO'].now_error">{{networksKeys[net]['NEO'].now_error}}</div>
             </div>
-            <div class="contracts-statistics_name">Error</div>
+            <!--<div class="contracts-statistics_name">Error</div>-->
         </div>
     </div>
 </div>

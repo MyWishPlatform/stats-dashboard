@@ -24,11 +24,12 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
         $rootScope.currencyStats = ($rootScope.currencyStats === 'WISH' ? 'EOSISH' : 'WISH');
     }, 15000);
 
-
-
+    var onInitMarquee;
     var updateStatistics = function() {
         $http.get(API_CONSTANTS.HOSTS.PATH + API_CONSTANTS.GET_STATISTICS).then(function(response) {
             $rootScope.statistics = response.data;
+
+            // console.log(response.data);
 
             response.data.currency_statistics.wish_price_usd = response.data.currency_statistics.wish_price_eth * response.data.currency_statistics.eth_price_usd;
 
@@ -56,15 +57,24 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
                     RSK: response.data['RSK_MAINNET'],
                     ETH: response.data['ETHEREUM_MAINNET'],
                     NEO: response.data['NEO_MAINNET'],
-                    EOS: response.data['EOS_MAINNET']
+                    EOS: response.data['EOS_MAINNET'],
+                    TRON: response.data['TRON_MAINNET']
                 },
                 TESTNET: {
                     RSK: response.data['RSK_TESTNET'],
                     ETH: response.data['ETHEREUM_ROPSTEN'],
                     NEO: response.data['NEO_TESTNET'],
-                    EOS: response.data['EOS_TESTNET']
+                    EOS: response.data['EOS_TESTNET'],
+                    TRON: response.data['TRON_TESTNET']
                 }
             };
+
+            if (!onInitMarquee) {
+                onInitMarquee = true;
+                jQuery('#marquee').marquee();
+            }
+
+
         });
     };
     $interval(updateStatistics, 30000);

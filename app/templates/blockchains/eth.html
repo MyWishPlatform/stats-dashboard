@@ -1,27 +1,25 @@
-<div class="grid-cell grid-cell-1-5 grid-cell-s-1 eth-colorized title-colorized">
+<div class="grid-cell grid-cell-1-5 grid-cell-s-1 title-colorized">
     <div class="grid-row with-padding">
-        <div class="grid-cell grid-cell-1">
+        <div class="grid-cell grid-cell-2-5">
             <div class="network-type__title">
-                <img src="/static/images/eth-dark.svg">&nbsp;Ethereum
+                <img src="/static/images/eth-dark.svg">&nbsp;ETH
             </div>
         </div>
-    </div>
-
-    <div class="grid-row with-padding">
-        <div class="grid-cell grid-cell-1">
+        <div class="grid-cell grid-cell-3-5">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
                     {{networksKeys[net]['ETH'].contracts}}
                 </div>
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['ETH'].new_contracts">{{networksKeys[net]['ETH'].new_contracts}}</div>
-                <i class="icon-contracts contracts-statistics_info__icon blue-color"></i>
             </div>
         </div>
     </div>
 </div>
-<div class="grid-cell grid-cell-4-5 grid-cell-s-1">
-    <div class="grid-row eth-colorized with-padding">
+
+
+<div class="grid-cell grid-cell-4-5 grid-cell-s-1 contracts-counts-rows">
+    <div class="grid-row">
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
@@ -31,7 +29,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_0_new">{{networksKeys[net]['ETH'].contract_type_0_new}}</div>
                 <i class="icon-lastwill contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Will</div>
         </div>
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -42,7 +39,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_4_new">{{networksKeys[net]['ETH'].contract_type_4_new}}</div>
                 <i class="icon-crowdsale contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Sale (CrowdSale)</div>
         </div>
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -53,7 +49,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_5_new">{{networksKeys[net]['ETH'].contract_type_5_new}}</div>
                 <i class="icon-token contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Token</div>
         </div>
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -64,7 +59,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_1_new">{{networksKeys[net]['ETH'].contract_type_1_new}}</div>
                 <i class="icon-key contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Lostkey</div>
         </div>
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -75,7 +69,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_2_new">{{networksKeys[net]['ETH'].contract_type_2_new}}</div>
                 <i class="icon-deffered contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Deferred</div>
         </div>
 
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
@@ -87,7 +80,6 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_8_new">{{networksKeys[net]['ETH'].contract_type_8_new}}</div>
                 <i class="icon-airdrop contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">Airdrop</div>
         </div>
 
         <div class="grid-cell grid-cell-1-7 grid-cell-ps-1 grid-cell-s-1-2">
@@ -99,11 +91,9 @@
                      ng-if="networksKeys[net]['ETH'].contract_type_9_new">{{networksKeys[net]['ETH'].contract_type_9_new}}</div>
                 <i class="icon-ice contracts-statistics_info__icon blue-color"></i>
             </div>
-            <div class="contracts-statistics_name">iPool</div>
         </div>
     </div>
-
-    <div class="grid-row eth-colorized with-padding">
+    <div class="grid-row statuses-row">
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
                 <div class="contracts-statistics_info__count">
@@ -112,7 +102,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['ETH'].now_created">{{networksKeys[net]['ETH'].now_created}}</div>
             </div>
-            <div class="contracts-statistics_name">Created</div>
+            <!--<div class="contracts-statistics_name">Created</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -122,7 +112,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['ETH'].launch">{{networksKeys[net]['ETH'].launch}}</div>
             </div>
-            <div class="contracts-statistics_name">Launch</div>
+            <!--<div class="contracts-statistics_name">Launch</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -132,7 +122,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['ETH'].now_active">{{networksKeys[net]['ETH'].now_active}}</div>
             </div>
-            <div class="contracts-statistics_name">Active</div>
+            <!--<div class="contracts-statistics_name">Active</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -142,7 +132,7 @@
                 <div class="contracts-statistics_info__count_new"
                      ng-if="networksKeys[net]['ETH'].now_done">{{networksKeys[net]['ETH'].now_done}}</div>
             </div>
-            <div class="contracts-statistics_name">Done</div>
+            <!--<div class="contracts-statistics_name">Done</div>-->
         </div>
         <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
             <div class="contracts-statistics_info">
@@ -152,7 +142,7 @@
                 <div class="contracts-statistics_info__count_new_error"
                      ng-if="networksKeys[net]['ETH'].now_error">{{networksKeys[net]['ETH'].now_error}}</div>
             </div>
-            <div class="contracts-statistics_name">Error</div>
+            <!--<div class="contracts-statistics_name">Error</div>-->
         </div>
     </div>
 </div>

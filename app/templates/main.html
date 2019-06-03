@@ -1,117 +1,51 @@
+
+<div id="marquee" class="currency-marqu">
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.wish_usd_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
+        ${{statistics.currency_statistics.wish_price_usd}}
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.wish_eth_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
+        {{statistics.currency_statistics.wish_price_eth}} ETH
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.btc_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/bitcoin.svg">
+        ${{statistics.currency_statistics.btc_price_usd}}
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eth_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/ethereum.png">
+        ${{statistics.currency_statistics.eth_price_usd}}
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eosish_usd_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/eosish-logo2.svg">
+        ${{statistics.currency_statistics.eosish_price_usd}}
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eosish_eos_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/eosish-logo2.svg">
+        {{statistics.currency_statistics.eosish_price_eos}} EOS
+    </div>
+    <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eos_percent_change_24h > 0 ? 'up' : 'down')">
+        <img class="currency-info-block_title_icon" src="/static/images/eos2.svg">
+        ${{statistics.currency_statistics.eos_price_usd.toFixed(3)}}
+    </div>
+</div>
+
+
+
+
 <div class="all-info-container" ng-if="statistics">
-
-    <div class="grid-row currency-stat"  ng-class="{'hidden-stat': currencyStats != 'WISH'}" >
-        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.wish_usd_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.wish_usd_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
-                    WISH
-                </div>
-                <div class="currency-info-block_rate">${{statistics.currency_statistics.wish_price_usd}}</div>
-                <div class="currency-info-block_range">
-                    <div class="float-right">Rank <b>{{statistics.currency_statistics.mywish_rank}}</b></div>
-                    {{statistics.currency_statistics.wish_usd_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.wish_usd_percent_change_24h}}%
-                </div>
-            </div>
-        </div>
-        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.wish_eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.wish_eth_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
-                    ETH
-                </div>
-                <div class="currency-info-block_rate">{{statistics.currency_statistics.wish_price_eth}}</div>
-                <div class="currency-info-block_range">
-                    {{statistics.currency_statistics.wish_eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.wish_eth_percent_change_24h}}%
-                </div>
-            </div>
-        </div>
-        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.btc_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.btc_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/btc.svg">
-                    BTC
-                </div>
-                <div class="currency-info-block_rate">${{statistics.currency_statistics.btc_price_usd}}</div>
-                <div class="currency-info-block_range">
-                    {{statistics.currency_statistics.btc_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.btc_percent_change_24h}}%
-                </div>
-            </div>
-        </div>
-        <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.eth_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.eth_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/eth2.svg">
-                    ETH
-                </div>
-                <div class="currency-info-block_rate">${{statistics.currency_statistics.eth_price_usd}}</div>
-                <div class="currency-info-block_range">
-                    {{statistics.currency_statistics.eth_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.eth_percent_change_24h}}%
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="grid-row currency-stat" ng-class="{'hidden-stat': currencyStats != 'EOSISH'}">
-
-        <!--ng-class="{'currency-info-block__positive': statistics.currency_statistics.wish_usd_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.wish_usd_percent_change_24h < 0}">-->
-        <div class="grid-cell grid-cell-1-3 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': true, 'currency-info-block__negative': statistics.currency_statistics.eosish_usd_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/eosish-logo.svg">
-                    EOSISH
-                </div>
-                <div class="currency-info-block_rate">${{statistics.currency_statistics.eosish_price_usd}}</div>
-                <div class="currency-info-block_range">
-                    <div class="float-right" ng-if="statistics.currency_statistics.eosish_rank">
-                        Rank <b>{{statistics.currency_statistics.eosish_rank}}</b>
-                    </div>&nbsp;
-                    <span ng-if="statistics.currency_statistics.eosish_rank">
-                        {{statistics.currency_statistics.eosish_usd_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.eosish_usd_percent_change_24h}}%
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <!--ng-class="{'currency-info-block__positive': statistics.currency_statistics.eosish_eos_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.eosish_eos_percent_change_24h < 0}">-->
-        <div class="grid-cell grid-cell-1-3 grid-cell-ps-1 grid-cell-s-1-2">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': true, 'currency-info-block__negative': statistics.currency_statistics.eosish_eos_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/eos-logo.svg">
-                    EOS
-                </div>
-                <div class="currency-info-block_rate">{{statistics.currency_statistics.eosish_price_eos}}</div>
-                <div class="currency-info-block_range">&nbsp;
-                    <!--{{statistics.currency_statistics.eosish_eos_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.eosish_eos_percent_change_24h}}%-->
-                </div>
-            </div>
-        </div>
-        <div class="grid-cell grid-cell-1-3 grid-cell-s-1">
-            <div class="currency-info-block"
-                 ng-class="{'currency-info-block__positive': statistics.currency_statistics.eos_percent_change_24h >= 0, 'currency-info-block__negative': statistics.currency_statistics.eos_percent_change_24h < 0}">
-                <div class="currency-info-block_title">
-                    <img class="currency-info-block_title_icon" src="/static/images/eos-logo.svg">
-                    EOS
-                </div>
-                <div class="currency-info-block_rate">${{statistics.currency_statistics.eos_price_usd}}</div>
-                <div class="currency-info-block_range">
-                    {{statistics.currency_statistics.eos_percent_change_24h > 0 ? '+' : ''}}{{statistics.currency_statistics.eos_percent_change_24h}}%
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div class="contracts-statistics">
         <div class="network-type"
              ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
+
             <div class="grid-row">
                 <div class="grid-cell grid-cell-1-4 grid-cell-ps-1">
                     <div class="network-type__content">
@@ -119,9 +53,10 @@
                             <div class="grid-cell grid-cell-1">
                                 <div class="contracts-statistics_info">
                                     <div class="contracts-statistics_info__count">
-                                        {{statistics.user_statistics.users}}
+                                        Users: {{statistics.user_statistics.users}}
                                     </div>
-                                    <div class="contracts-statistics_info__count_new" ng-if="statistics.user_statistics.new_users">
+                                    <div class="contracts-statistics_info__count_new"
+                                         ng-if="statistics.user_statistics.new_users">
                                         {{statistics.user_statistics.new_users}}
                                     </div>
                                     <i class="icon-account contracts-statistics_info__icon blue-color"></i>
@@ -131,6 +66,7 @@
                     </div>
                 </div>
 
+
                 <div class="grid-cell grid-cell-1-4 grid-cell-ps-1 float-right">
                     <div class="network-type__content">
                         <div class="grid-row with-padding">
@@ -138,7 +74,7 @@
                                 <div class="network-type__content_short-text">
                                     <span ng-class="{'bold': network == 'MAINNET'}">Mainnet</span>
                                     /
-                                    <span ng-class="{bold: network == 'TESTNET'}">Testnet</span>
+                                    <span ng-class="{bold: network == 'TESTNET'}">Testnet</span>&nbsp;&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
@@ -148,18 +84,17 @@
         </div>
     </div>
 
-
     <div class="contracts-statistics balances-statistics">
         <div class="network-type" ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
             <div class="network-type__content mainnet">
-                <div class="grid-row">
+                <div class="grid-row resources-content">
                     <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eth_account_balance >= 1,
                              'balances-statistics_item__negative': statistics.balances_statistics.eth_account_balance < 1
                              }">
-                            <b>ETH:</b><br/>
+                            <b>ETH:</b>
                             {{ statistics.balances_statistics.eth_account_balance|number:3 }}
                         </div>
                     </div>
@@ -170,21 +105,21 @@
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_account_balance >= 50,
                              'balances-statistics_item__negative': statistics.balances_statistics.eos_account_balance < 50
                              }">
-                            <b>EOS:</b><br/>
+                            <b>EOS:</b>
                             {{ statistics.balances_statistics.eos_account_balance }}
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_net_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_net_builder >= 90}">
-                            <b>NET:</b><br/>
+                            <b>NET:</b>
                             {{ statistics.balances_statistics.eos_net_builder|number:4 }} %
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-1-5 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_cpu_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_cpu_builder >= 90}">
-                            <b>CPU:</b><br/>
+                            <b>CPU:</b>
                             {{ statistics.balances_statistics.eos_cpu_builder|number:4 }} %
                         </div>
                     </div>
@@ -194,21 +129,21 @@
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_ram_builder >= 40,
                              'balances-statistics_item__negative': statistics.balances_statistics.eos_ram_builder < 40
                              }">
-                            <b>RAM:</b><br/>
+                            <b>RAM:</b>
                             {{ statistics.balances_statistics.eos_ram_builder|number:2 }} kb
                         </div>
                     </div>
                 </div>
             </div>
             <div class="network-type__content testnet">
-                <div class="grid-row">
+                <div class="grid-row resources-content">
                     <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{
                              'balances-statistics_item__positive': statistics.balances_statistics.eth_test_account_balance >= 1,
                              'balances-statistics_item__negative': statistics.balances_statistics.eth_test_account_balance < 1
                              }">
-                            <b>ETH:</b><br/>
+                            <b>ETH:</b>
                             {{ statistics.balances_statistics.eth_test_account_balance|number:3 }}
                         </div>
                     </div>
@@ -225,8 +160,8 @@
                              'balances-statistics_item__positive': statistics.balances_statistics.gas_test_balance >= 5000,
                              'balances-statistics_item__negative': statistics.balances_statistics.gas_test_balance < 5000
                              }">
-                            <b>NEO&nbsp;GAS:</b><br/>
-                            {{ statistics.balances_statistics.gas_test_balance|number:3 }}
+                            <b>NEO&nbsp;GAS:</b>
+                            {{ statistics.balances_statistics.gas_test_balance|number:0 }}
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
@@ -235,21 +170,21 @@
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_test_account_balance >= 50,
                              'balances-statistics_item__negative': statistics.balances_statistics.eos_test_account_balance < 50
                              }">
-                            <b>EOS:</b><br/>
+                            <b>EOS:</b>
                             {{ statistics.balances_statistics.eos_test_account_balance }}
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_net_test_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_net_test_builder >= 90}">
-                            <b>NET:</b><br/>
+                            <b>NET:</b>
                             {{ statistics.balances_statistics.eos_net_test_builder|number:4 }} %
                         </div>
                     </div>
                     <div class="grid-cell grid-cell-1-6 grid-cell-ps-1 grid-cell-s-1-2">
                         <div class="balances-statistics_item"
                              ng-class="{'balances-statistics_item__positive': statistics.balances_statistics.eos_cpu_test_builder < 90, 'balances-statistics_item__negative': statistics.balances_statistics.eos_cpu_test_builder >= 90}">
-                            <b>CPU:</b><br/>
+                            <b>CPU:</b>
                             {{ statistics.balances_statistics.eos_cpu_test_builder|number:4 }} %
                         </div>
                     </div>
@@ -259,7 +194,7 @@
                              'balances-statistics_item__positive': statistics.balances_statistics.eos_ram_test_builder >= 40,
                              'balances-statistics_item__negative': statistics.balances_statistics.eos_ram_test_builder < 40
                              }">
-                            <b>RAM:</b><br/>
+                            <b>RAM:</b>
                             {{ statistics.balances_statistics.eos_ram_test_builder|number:2 }} kb
                         </div>
                     </div>

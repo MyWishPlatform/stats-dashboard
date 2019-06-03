@@ -30,10 +30,10 @@ header {
 }
 
 .all-info-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 96%;
-  margin-top: 2em;
+  //margin-left: auto;
+  //margin-right: auto;
+  //width: 96%;
+  //margin-top: 2em;
   position: relative;
 }
 
@@ -149,9 +149,10 @@ header {
     font-size: 1.1vw;
   }
   .all-info-container {
-    width: 96%;
+    //width: 96%;
   }
 }
+
 @media screen and (max-width: 680px) {
   body {
     font-size: 2vw;
@@ -160,5 +161,41 @@ header {
     font-size: 80%;
     margin-left: 2em;
     margin-right: 2em;
+  }
+}
+
+
+.currency-marqu {
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #fff;
+  text-shadow: 0 1px 2px rgb(255, 255, 255);
+  border-bottom: 1px solid #aaa;
+  &-block {
+    text-indent: initial;
+    display: inline-block;
+    padding: 0.1em 1em 0;
+    font-size: 3vw;
+    font-weight: bold;
+    line-height: 1.5em;
+    img {
+      height: 1.3em;
+    }
+    &_up {
+      color: #0a0;
+    }
+    &_down {
+      color: #a00;
+    }
+  }
+}
+
+
+.resources-content {
+  margin-left: 0;
+  margin-right: 0;
+  > .grid-cell {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

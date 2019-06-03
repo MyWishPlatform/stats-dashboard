@@ -93,6 +93,7 @@ gulp.task('app:vendors', ['app:vendors-clean'], function() {
     return gulp.src(
         [
             path.join(folders['npm'], 'jquery', 'dist', 'jquery.min.js'),
+            path.join('app', 'js', 'jqueryplugins.js'),
             path.join(folders['npm'], 'angular', 'angular.min.js'),
             path.join(folders['npm'], 'angular-resource', 'angular-resource.min.js'),
             path.join(folders['npm'], 'angular-cookies', 'angular-cookies.min.js'),
