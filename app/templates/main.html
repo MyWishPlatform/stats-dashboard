@@ -21,6 +21,11 @@
         ${{statistics.currency_statistics.eth_price_usd}}
     </div>
     <div class="currency-marqu-block"
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eth_percent_change_24h > 0 ? 'up' : 'down')">
+        <span class="currency-info-block_title_icon" style="font-size: 4vw; color: #777;">$</span>
+        {{statistics.currency_statistics.usd_price_rub | number : '1.2'}} RUB
+    </div>
+    <!-- div class="currency-marqu-block"
          ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eosish_usd_percent_change_24h > 0 ? 'up' : 'down')">
         <img class="currency-info-block_title_icon" src="/static/images/eosish-logo2.svg">
         ${{statistics.currency_statistics.eosish_price_usd}}
@@ -34,7 +39,7 @@
          ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eos_percent_change_24h > 0 ? 'up' : 'down')">
         <img class="currency-info-block_title_icon" src="/static/images/eos2.svg">
         ${{statistics.currency_statistics.eos_price_usd.toFixed(3)}}
-    </div>
+    </div --->
 </div>
 
 
@@ -203,9 +208,6 @@
         </div>
     </div>
 
-
-
-
     <div class="contracts-statistics">
         <div class="network-type" ng-class="{'mainnet': network == 'MAINNET', 'testnet': network == 'TESTNET'}">
             <div class="network-type__content mainnet" ng-include="'/templates/mainnet.html'"></div>
@@ -213,5 +215,3 @@
         </div>
     </div>
 </div>
-
-

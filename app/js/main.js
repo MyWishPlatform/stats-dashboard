@@ -25,9 +25,13 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
     }, 15000);
 
     var onInitMarquee;
+
     var updateStatistics = function() {
+
         $http.get(API_CONSTANTS.HOSTS.PATH + API_CONSTANTS.GET_STATISTICS).then(function(response) {
             $rootScope.statistics = response.data;
+
+            // client.send(JSON.stringify([{type: 'subHq', event: 'kline', param: {businessType: 'coin-usdt-swap', kType: '1day', size: 1440}}]));
 
             // console.log(response.data);
 
@@ -71,7 +75,7 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
 
             if (!onInitMarquee) {
                 onInitMarquee = true;
-                jQuery('#marquee').marquee();
+                // jQuery('#marquee').marquee();
             }
 
 
