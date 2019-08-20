@@ -21,7 +21,7 @@
         ${{statistics.currency_statistics.eth_price_usd}}
     </div>
     <div class="currency-marqu-block"
-         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eth_percent_change_24h > 0 ? 'up' : 'down')">
+         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.usd_percent_change_24h > 0 ? 'up' : 'down')">
         <span class="currency-info-block_title_icon" style="font-size: 4vw; color: #777;">$</span>
         {{statistics.currency_statistics.usd_price_rub | number : '1.2'}} RUB
     </div>
