@@ -31,10 +31,6 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
         $http.get(API_CONSTANTS.HOSTS.PATH + API_CONSTANTS.GET_STATISTICS).then(function(response) {
             $rootScope.statistics = response.data;
 
-            // client.send(JSON.stringify([{type: 'subHq', event: 'kline', param: {businessType: 'coin-usdt-swap', kType: '1day', size: 1440}}]));
-
-            // console.log(response.data);
-
             response.data.currency_statistics.wish_price_usd = response.data.currency_statistics.wish_price_eth * response.data.currency_statistics.eth_price_usd;
 
             var oldWishPrice = response.data.currency_statistics.wish_price_usd / (100 + response.data.currency_statistics.wish_usd_percent_change_24h) * 100;
@@ -52,33 +48,25 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
 
 
             response.data.currency_statistics.eosish_price_usd = Math.round(response.data.currency_statistics.eosish_price_usd * 10000) / 10000;
-            // response.data.currency_statistics.eos_price_usd = Math.round(response.data.currency_statistics.eos_price_usd * 10000) / 10000;
 
-
-            // console.log(response.data);
             $rootScope.networksKeys = {
                 MAINNET: {
                     RSK: response.data['RSK_MAINNET'],
                     ETH: response.data['ETHEREUM_MAINNET'],
                     NEO: response.data['NEO_MAINNET'],
                     EOS: response.data['EOS_MAINNET'],
-                    TRON: response.data['TRON_MAINNET']
+                    TRON: response.data['TRON_MAINNET'],
+                    WAVES: response.data['WAVES_MAINNET']
                 },
                 TESTNET: {
                     RSK: response.data['RSK_TESTNET'],
                     ETH: response.data['ETHEREUM_ROPSTEN'],
                     NEO: response.data['NEO_TESTNET'],
                     EOS: response.data['EOS_TESTNET'],
-                    TRON: response.data['TRON_TESTNET']
+                    TRON: response.data['TRON_TESTNET'],
+                    WAVES: response.data['WAVES_TESTNET']
                 }
             };
-
-            if (!onInitMarquee) {
-                onInitMarquee = true;
-                // jQuery('#marquee').marquee();
-            }
-
-
         });
     };
     $interval(updateStatistics, 30000);
