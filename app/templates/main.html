@@ -5,11 +5,16 @@
         <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
         ${{statistics.currency_statistics.wish_price_usd}}
     </div>
-    <div class="currency-marqu-block"
-         ng-class="'currency-marqu-block_' + (statistics.currency_statistics.wish_eth_percent_change_24h > 0 ? 'up' : 'down')">
-        <img class="currency-info-block_title_icon" src="/static/images/wish.svg">
-        {{statistics.currency_statistics.wish_price_eth}} ETH
+
+    <div class="currency-marqu-block currency-marqu-block_up">
+        <img class="currency-info-block_title_icon" src="https://img-cdn.bitforex.vip/SWAPm.png">
+        ${{statistics.currency_statistics.swap_price_usd | number}}
     </div>
+    <!--<div class="currency-marqu-block"-->
+         <!--ng-class="'currency-marqu-block_' + (statistics.currency_statistics.wish_eth_percent_change_24h > 0 ? 'up' : 'down')">-->
+        <!--<img class="currency-info-block_title_icon" src="/static/images/wish.svg">-->
+        <!--{{statistics.currency_statistics.wish_price_eth}} ETH-->
+    <!--</div>-->
     <div class="currency-marqu-block"
          ng-class="'currency-marqu-block_' + (statistics.currency_statistics.btc_percent_change_24h > 0 ? 'up' : 'down')">
         <img class="currency-info-block_title_icon" src="/static/images/bitcoin.svg">
@@ -20,11 +25,15 @@
         <img class="currency-info-block_title_icon" src="/static/images/ethereum.png">
         ${{statistics.currency_statistics.eth_price_usd}}
     </div>
+
+
     <div class="currency-marqu-block"
          ng-class="'currency-marqu-block_' + (statistics.currency_statistics.usd_percent_change_24h > 0 ? 'up' : 'down')">
-        <span class="currency-info-block_title_icon" style="font-size: 4vw; color: #777;">$</span>
+        <span class="currency-info-block_title_icon" style="font-size: 3.5vw; color: #777;">$</span>
         {{statistics.currency_statistics.usd_price_rub | number : '1.2'}} RUB
     </div>
+
+
     <!-- div class="currency-marqu-block"
          ng-class="'currency-marqu-block_' + (statistics.currency_statistics.eosish_usd_percent_change_24h > 0 ? 'up' : 'down')">
         <img class="currency-info-block_title_icon" src="/static/images/eosish-logo2.svg">

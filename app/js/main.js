@@ -29,9 +29,33 @@ module.controller('baseController', function($scope, $rootScope, API_CONSTANTS, 
     var updateStatistics = function() {
 
         $http.get(API_CONSTANTS.HOSTS.PATH + API_CONSTANTS.GET_STATISTICS).then(function(response) {
-            $rootScope.statistics = response.data;
 
+            var bFClient = new WebSocket('wss://www.bitforex.com/mkapi/coinGroup3/ws');
+
+            bFClient.onopen = function() {
+                bFClient.send(JSON.stringify([
+                    {"type": "subHq", "event": "trade", "param": {"businessType": "coin-btc-swap", "size": 100}}
+                ]));
+            };
+
+            var swapPrice;
+            bFClient.onmessage = function(message) {
+                try {
+                    swapPrice = JSON.parse(message.data).data[0].price;
+                    $rootScope.statistics.currency_statistics.swap_price_usd =
+                        swapPrice * $rootScope.statistics.currency_statistics.btc_price_usd;
+                    $rootScope.$apply();
+                    bFClient.close();
+                } catch(error) {}
+            };
+
+            response.data.currency_statistics.swap_price_usd = $rootScope.statistics ?
+                $rootScope.statistics.currency_statistics.swap_price_usd : 0;
+
+            $rootScope.statistics = response.data;
             response.data.currency_statistics.wish_price_usd = response.data.currency_statistics.wish_price_eth * response.data.currency_statistics.eth_price_usd;
+
+
 
             var oldWishPrice = response.data.currency_statistics.wish_price_usd / (100 + response.data.currency_statistics.wish_usd_percent_change_24h) * 100;
             var oldEthPrice = response.data.currency_statistics.eth_price_usd / (100 + response.data.currency_statistics.eth_percent_change_24h) * 100;
